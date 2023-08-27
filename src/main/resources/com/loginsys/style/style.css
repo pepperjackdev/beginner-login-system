@@ -1,0 +1,37 @@
+* {
+    primary:    #03045e;
+    secondary:  #ffffff;
+    third:      #ffffff1f;
+    fourth:      ffffff3f;
+}
+
+* {
+    -fx-font-family: Arial;
+    -fx-text-fill: secondary;
+}
+
+.root {
+    -fx-background-color: primary;
+}
+
+.title_pane {
+    -fx-font-size: 20;
+}
+
+.button {
+    -fx-background-color: third;
+}
+
+.button:hover {
+    -fx-background-color: secondary;
+    -fx-text-fill: primary;
+}
+
+.button:hover:pressed {
+    -fx-background-color: fourth;
+    -fx-text-fill: secondary;
+}
+
+.text-field {
+    -fx-text-fill: black;
+}

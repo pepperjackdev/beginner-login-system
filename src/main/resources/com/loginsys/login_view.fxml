@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.loginsys.LoginViewController">
+   <left>
+      <Pane prefHeight="200.0" prefWidth="30.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="30.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox prefHeight="306.0" prefWidth="340.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="51.0" prefWidth="539.0">
+               <children>
+                  <Label layoutX="1.0" layoutY="17.0" text="Login Page: log into your account" />
+               </children></Pane>
+            <TextField fx:id="identity" prefHeight="34.0" prefWidth="280.0" promptText="Email / Username" />
+            <Pane prefHeight="15.0" prefWidth="280.0" />
+            <PasswordField fx:id="password" prefHeight="34.0" promptText="Password" />
+            <Pane prefHeight="15.0" prefWidth="280.0" />
+            <Button fx:id="login" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="574.0" text="Login to your account" />
+            <Pane prefHeight="15.0" prefWidth="280.0" />
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" prefHeight="34.0" prefWidth="556.0" text="Cancel" />
+            <Pane prefHeight="15.0" prefWidth="340.0" />
+            <Button fx:id="signup" mnemonicParsing="false" onAction="#signup" prefHeight="34.0" prefWidth="566.0" text="Sign up" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
