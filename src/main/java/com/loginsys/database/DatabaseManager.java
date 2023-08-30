@@ -216,16 +216,15 @@ public class DatabaseManager {
      * Removes the specified user from the db.
      *
      * @param id    The user's id.
-     * @return      True, if the user gets deleted; false if not. (probably because it doesn't exist)
      */
-    public static boolean deleteRegisteredUserFromDatabase(String id) {
+    public static void deleteRegisteredUserFromDatabase(String id) {
 
         Objects.requireNonNull(id);
 
         try (Connection connection = DriverManager.getConnection(connectionString)) {
             PreparedStatement stm = connection.prepareStatement("delete from Users where id = ?");
             stm.setString(1, id);
-            return stm.executeUpdate() > 0;
+            stm.executeUpdate();
         }
 
         catch (SQLException e) {

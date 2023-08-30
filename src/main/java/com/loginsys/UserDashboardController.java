@@ -51,7 +51,6 @@ public class UserDashboardController {
             try {
                 currentlyLoggedInUser.set(property, updated);
                 new Alert(Alert.AlertType.CONFIRMATION, "Successfully updated your " + property.value, ButtonType.OK).showAndWait();
-                Stream.of(oldPassword, newPassword, confirmNewPassword).forEach(TextField::clear);
             } catch (RuntimeException e) {
                 new Alert(
                         Alert.AlertType.ERROR,
@@ -60,6 +59,10 @@ public class UserDashboardController {
                 ).showAndWait();
             }
         }
+
+        Stream.of(oldPassword, newPassword, confirmNewPassword).forEach(TextField::clear);
+        email.setText(currentlyLoggedInUser.getEmail());
+        username.setText(currentlyLoggedInUser.getUsername());
     }
 
     @FXML void updateEmailAddress() {
@@ -106,6 +109,8 @@ public class UserDashboardController {
         } else {
             new Alert(Alert.AlertType.ERROR, "Your current password (old password field) is wrong. Try again.", ButtonType.OK).showAndWait();
         }
+
+        Stream.of(oldPassword, newPassword, confirmNewPassword).forEach(TextField::clear);
 
     }
 

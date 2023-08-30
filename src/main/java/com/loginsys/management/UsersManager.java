@@ -58,8 +58,8 @@ public class UsersManager {
         }
     }
 
-    public static boolean delete(String id) {
-        return deleteRegisteredUserFromDatabase(id);
+    public static void delete(String id) {
+        deleteRegisteredUserFromDatabase(id);
     }
 
 }
